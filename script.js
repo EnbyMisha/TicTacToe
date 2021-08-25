@@ -1,4 +1,5 @@
 const mainContainer = document.getElementById("main-container");
+const gameTitle = document.getElementById("main-container-title");
 const playSpace = document.getElementById("play-space");
 
 const btn1 = document.getElementById("btn1");
@@ -13,22 +14,136 @@ const btn9 = document.getElementById("btn9");
 
 let player = 1;
 
+
+let _ = 1;
 const game = setInterval(() => {
-  const btns = [
-    btn1, btn2, btn3,
-    btn4, btn5, btn6,
-    btn7, btn8, btn9
-  ];
+  let t = "";
+  let c = "";
+  if(_ == 1) {
+    t = "X";
+    c = "#3df58a"
+  }else {
+    t = "O";
+    c = "#f54d3d";
+  }
 
-  let result = "";
+  if(btn1.textContent == t && btn2.textContent == t && btn3.textContent == t) {
+    btn1.disabled = true;
+    btn2.disabled = true;
+    btn3.disabled = true;
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
+    btn7.disabled = true;
+    btn8.disabled = true;
+    btn9.disabled = true;
+    gameTitle.textContent = "Winner!";
+    gameTitle.style.color = c;
+  }
 
-  for(let i = 0; i < btns.length; i++) {
-    if(btns[i].textContent != "") result += btns[i].textContent;
-    else result += "-";
-  };
+  if(btn1.textContent == t && btn5.textContent == t && btn9.textContent == t) {
+    btn1.disabled = true;
+    btn2.disabled = true;
+    btn3.disabled = true;
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
+    btn7.disabled = true;
+    btn8.disabled = true;
+    btn9.disabled = true;
+    gameTitle.textContent = "Winner!";
+    gameTitle.style.color = c;
+  }
 
-  console.log(result);
-}, 100)
+  if(btn1.textContent == t && btn4.textContent == t && btn7.textContent == t) {
+    btn1.disabled = true;
+    btn2.disabled = true;
+    btn3.disabled = true;
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
+    btn7.disabled = true;
+    btn8.disabled = true;
+    btn9.disabled = true;
+    gameTitle.textContent = "Winner!";
+    gameTitle.style.color = c;
+  }
+
+  if(btn2.textContent == t && btn5.textContent == t && btn8.textContent == t) {
+    btn1.disabled = true;
+    btn2.disabled = true;
+    btn3.disabled = true;
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
+    btn7.disabled = true;
+    btn8.disabled = true;
+    btn9.disabled = true;
+    gameTitle.textContent = "Winner!";
+    gameTitle.style.color = c;
+  }
+
+  if(btn3.textContent == t && btn6.textContent == t && btn9.textContent == t) {
+    btn1.disabled = true;
+    btn2.disabled = true;
+    btn3.disabled = true;
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
+    btn7.disabled = true;
+    btn8.disabled = true;
+    btn9.disabled = true;
+    gameTitle.textContent = "Winner!";
+    gameTitle.style.color = c;
+  }
+
+  if(btn4.textContent == t && btn5.textContent == t && btn6.textContent == t) {
+    btn1.disabled = true;
+    btn2.disabled = true;
+    btn3.disabled = true;
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
+    btn7.disabled = true;
+    btn8.disabled = true;
+    btn9.disabled = true;
+    gameTitle.textContent = "Winner!";
+    gameTitle.style.color = c;
+  }
+
+  if(btn7.textContent == t && btn8.textContent == t && btn9.textContent == t) {
+    btn1.disabled = true;
+    btn2.disabled = true;
+    btn3.disabled = true;
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
+    btn7.disabled = true;
+    btn8.disabled = true;
+    btn9.disabled = true;
+    gameTitle.textContent = "Winner!";
+    gameTitle.style.color = c;
+  }
+
+  if(btn3.textContent == t && btn5.textContent == t && btn7.textContent == t) {
+    btn1.disabled = true;
+    btn2.disabled = true;
+    btn3.disabled = true;
+    btn4.disabled = true;
+    btn5.disabled = true;
+    btn6.disabled = true;
+    btn7.disabled = true;
+    btn8.disabled = true;
+    btn9.disabled = true;
+    gameTitle.textContent = "Winner!";
+    gameTitle.style.color = c;
+  }
+
+  if(_ == 0) _++;
+  else _--;
+}, 5)
+
+
 
 btn1.addEventListener("click", () => {
   if(player == 1) {
