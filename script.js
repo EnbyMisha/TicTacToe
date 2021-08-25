@@ -13,9 +13,11 @@ const btn8 = document.getElementById("btn8");
 const btn9 = document.getElementById("btn9");
 
 let player = 1;
+let winner 0;
 
 
 let _ = 1;
+let winnerFound = false;
 const game = setInterval(() => {
   let t = "";
   let c = "";
@@ -28,104 +30,54 @@ const game = setInterval(() => {
   }
 
   if(btn1.textContent == t && btn2.textContent == t && btn3.textContent == t) {
-    btn1.disabled = true;
-    btn2.disabled = true;
-    btn3.disabled = true;
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    btn7.disabled = true;
-    btn8.disabled = true;
-    btn9.disabled = true;
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
+    winnerFound = True
   }
 
   if(btn1.textContent == t && btn5.textContent == t && btn9.textContent == t) {
-    btn1.disabled = true;
-    btn2.disabled = true;
-    btn3.disabled = true;
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    btn7.disabled = true;
-    btn8.disabled = true;
-    btn9.disabled = true;
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
+    winnerFound = True
   }
 
   if(btn1.textContent == t && btn4.textContent == t && btn7.textContent == t) {
-    btn1.disabled = true;
-    btn2.disabled = true;
-    btn3.disabled = true;
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    btn7.disabled = true;
-    btn8.disabled = true;
-    btn9.disabled = true;
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
+    winnerFound = True
   }
 
   if(btn2.textContent == t && btn5.textContent == t && btn8.textContent == t) {
-    btn1.disabled = true;
-    btn2.disabled = true;
-    btn3.disabled = true;
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    btn7.disabled = true;
-    btn8.disabled = true;
-    btn9.disabled = true;
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
+    winnerFound = True
   }
 
   if(btn3.textContent == t && btn6.textContent == t && btn9.textContent == t) {
-    btn1.disabled = true;
-    btn2.disabled = true;
-    btn3.disabled = true;
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    btn7.disabled = true;
-    btn8.disabled = true;
-    btn9.disabled = true;
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
+    winnerFound = True
   }
 
   if(btn4.textContent == t && btn5.textContent == t && btn6.textContent == t) {
-    btn1.disabled = true;
-    btn2.disabled = true;
-    btn3.disabled = true;
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    btn7.disabled = true;
-    btn8.disabled = true;
-    btn9.disabled = true;
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
+    winnerFound = True
   }
 
   if(btn7.textContent == t && btn8.textContent == t && btn9.textContent == t) {
-    btn1.disabled = true;
-    btn2.disabled = true;
-    btn3.disabled = true;
-    btn4.disabled = true;
-    btn5.disabled = true;
-    btn6.disabled = true;
-    btn7.disabled = true;
-    btn8.disabled = true;
-    btn9.disabled = true;
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
+    winnerFound = True
   }
 
   if(btn3.textContent == t && btn5.textContent == t && btn7.textContent == t) {
+    gameTitle.textContent = "Winner!";
+    gameTitle.style.color = c;
+    winnerFound = True
+  }
+
+  if(winnerFound) {
     btn1.disabled = true;
     btn2.disabled = true;
     btn3.disabled = true;
@@ -135,8 +87,6 @@ const game = setInterval(() => {
     btn7.disabled = true;
     btn8.disabled = true;
     btn9.disabled = true;
-    gameTitle.textContent = "Winner!";
-    gameTitle.style.color = c;
   }
 
   if(_ == 0) _++;
