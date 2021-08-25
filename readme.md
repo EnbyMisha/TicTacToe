@@ -1,6 +1,2 @@
 # Tic Tac Toe
-Heyo, Misha here!
-
-Quick notice, this is incomplete.
-
-Thank you for waiting :)
+The game is quite simple. Get 3 in a row, horizontally, vertically or diagnoly. Manage that, and you've won.
