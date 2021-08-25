@@ -13,11 +13,10 @@ const btn8 = document.getElementById("btn8");
 const btn9 = document.getElementById("btn9");
 
 let player = 1;
-let winner 0;
 
 
 let _ = 1;
-let winnerFound = false;
+let winFound = false;
 const game = setInterval(() => {
   let t = "";
   let c = "";
@@ -32,52 +31,52 @@ const game = setInterval(() => {
   if(btn1.textContent == t && btn2.textContent == t && btn3.textContent == t) {
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
-    winnerFound = True
+    winFound = true;
   }
 
   if(btn1.textContent == t && btn5.textContent == t && btn9.textContent == t) {
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
-    winnerFound = True
+    winFound = true;
   }
 
   if(btn1.textContent == t && btn4.textContent == t && btn7.textContent == t) {
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
-    winnerFound = True
+    winFound = true;
   }
 
   if(btn2.textContent == t && btn5.textContent == t && btn8.textContent == t) {
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
-    winnerFound = True
+    winFound = true;
   }
 
   if(btn3.textContent == t && btn6.textContent == t && btn9.textContent == t) {
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
-    winnerFound = True
+    winFound = true;
   }
 
   if(btn4.textContent == t && btn5.textContent == t && btn6.textContent == t) {
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
-    winnerFound = True
+    winFound = true;
   }
 
   if(btn7.textContent == t && btn8.textContent == t && btn9.textContent == t) {
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
-    winnerFound = True
+    winFound = true;
   }
 
   if(btn3.textContent == t && btn5.textContent == t && btn7.textContent == t) {
     gameTitle.textContent = "Winner!";
     gameTitle.style.color = c;
-    winnerFound = True
+    winFound = true;
   }
 
-  if(winnerFound) {
+  if(winFound) {
     btn1.disabled = true;
     btn2.disabled = true;
     btn3.disabled = true;
