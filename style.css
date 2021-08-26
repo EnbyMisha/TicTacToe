@@ -83,3 +83,13 @@ body {
     color: hsl(0, 0%, 100%);
     background-color: hsl(0, 0%, 35%);
 }
+
+@keyframes cycle-background {
+    100% {
+        background-color: #3df58a;
+    }
+
+    0% {
+        background-color: #f54d3d;
+    }
+}
